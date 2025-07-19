@@ -29,6 +29,41 @@ To configure basic monitoring on an EC2 instance using AWS CloudWatch and demons
 - Installed and used the `stress` utility on the EC2 instance to simulate high CPU usage
 - Alarm was triggered and a notification was received via email (SNS)
 
+##  Process Flow – 
+
+1. **Launch EC2 Instance**
+   - Started an EC2 instance using the AWS Console.
+   - Noted the instance ID and ensured it was in the `running` state.
+
+2. **Open CloudWatch Console**
+   - Navigated to the AWS CloudWatch service.
+   - Selected the **"Dashboards"** section to create a custom monitoring dashboard.
+
+3. **Create Dashboard Widget**
+   - Created a new dashboard.
+   - Selected **EC2 → CPUUtilization metric** to visualize real-time CPU usage of the instance.
+
+4. **Create Alarm**
+   - From the Metrics section, created an alarm on `CPUUtilization`.
+   - Set a threshold value (e.g., greater than 15%) for alarm triggering.
+   - Configured the alarm to evaluate periodically and trigger when the threshold was breached.
+
+5. **Configure Notification**
+   - Created an **SNS (Simple Notification Service)** topic.
+   - Subscribed an email address to receive notifications.
+   - Linked this SNS topic to the alarm action (to notify when alarm is triggered).
+
+6. **Simulate High CPU Usage**
+   - Connected to the EC2 instance via SSH or EC2 Instance Connect.
+   - Executed CPU-intensive commands (stress) to artificially increase CPU usage:
+   - Verified the spike in usage on the dashboard.
+
+7. **Receive Alarm Notification**
+   - Monitored the alarm transition from `OK` → `ALARM`.
+   - Confirmed receipt of an alert email indicating high CPU utilization.
+
+
+
 ## Tools Used
 
 - AWS CloudWatch
