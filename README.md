@@ -79,3 +79,5 @@ This task demonstrated real-time monitoring of AWS EC2 resources using CloudWatc
 
 <img width="2880" height="1717" alt="Image" src="https://github.com/user-attachments/assets/24ab9220-699c-4171-b2dc-1e2d0df62b76" />
 
+<img width="2880" height="1800" alt="Image" src="https://github.com/user-attachments/assets/17132a9d-8de2-481d-ae6c-e3a761feb441" />
+
